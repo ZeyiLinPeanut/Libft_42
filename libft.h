@@ -6,7 +6,7 @@
 /*   By: zlin-zho <zeyilin222@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:18:16 by zlin-zho          #+#    #+#             */
-/*   Updated: 2024/07/02 18:23:58 by zlin-zho         ###   ########.fr       */
+/*   Updated: 2024/07/02 22:03:47 by zlin-zho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,6 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
+void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
