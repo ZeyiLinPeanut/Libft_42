@@ -6,7 +6,7 @@
 /*   By: zlin-zho <zeyilin222@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 18:15:58 by alromero          #+#    #+#             */
-/*   Updated: 2024/07/02 20:49:38 by zlin-zho         ###   ########.fr       */
+/*   Updated: 2024/07/02 20:53:10 by zlin-zho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 	int		i;
 
-	if (!s)
-		return (NULL);
 	i = 0;
 	str = malloc(len + 1);
-	if (!str)
+	if (!s || !str)
 		return (NULL);
 	if (start > ft_strlen(s))
 		return (ft_strdup(""));
