@@ -6,7 +6,7 @@
 /*   By: zlin-zho <zeyilin222@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 17:53:50 by zlin-zho          #+#    #+#             */
-/*   Updated: 2024/07/02 19:28:19 by zlin-zho         ###   ########.fr       */
+/*   Updated: 2024/07/02 19:50:36 by zlin-zho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,23 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*aux;
 	t_list	*auxgon;
 
-	aux = lst;
-	gon = malloc(sizeof(t_list));
+	if (!lst || !f)
+		return (NULL);
+	gon = ft_lstnew(f(lst->content));
 	if (!gon)
-		return (0);
+		return (NULL);
+	aux = lst->next;
 	auxgon = gon;
 	while (aux)
 	{
 		auxgon->next = ft_lstnew(f(aux->content));
-		auxgon->content = f(aux->content);
-		if (!(auxgon->next = malloc(sizeof(t_list))))
-			ft_lstclear(&aux, del);
-		aux = aux->next;
+		if (!(auxgon->next))
+		{
+			ft_lstclear(&gon, del);
+			return (NULL);
+		}
 		auxgon = auxgon->next;
+		aux = aux->next;
 	}
 	return (gon);
 }
