@@ -6,13 +6,21 @@
 /*   By: zlin-zho <zeyilin222@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 16:43:19 by zlin-zho          #+#    #+#             */
-/*   Updated: 2024/07/02 16:43:28 by zlin-zho         ###   ########.fr       */
+/*   Updated: 2024/07/02 19:13:18 by zlin-zho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
+
+int	max_reach(int sign)
+{
+	if (sign == -1)
+		return (0);
+	else
+		return (-1);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -39,12 +47,4 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (result * sign);
-}
-
-int	max_reach(int sign)
-{
-	if (sign == -1)
-		return (0);
-	else
-		return (-1);
 }

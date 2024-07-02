@@ -6,14 +6,14 @@
 /*   By: zlin-zho <zeyilin222@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 15:51:31 by zlin-zho          #+#    #+#             */
-/*   Updated: 2024/07/02 17:58:22 by zlin-zho         ###   ########.fr       */
+/*   Updated: 2024/07/02 19:17:41 by zlin-zho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int	length(int n)
+int	len(int n)
 {
 	int	i;
 	int	aux;
@@ -46,7 +46,7 @@ int	create_model(int n)
 		return (1);
 	if (n == -2147483648)
 		return (1000000000);
-	digits = lenght(n);
+	digits = len(n);
 	if (n < 0)
 		digits--;
 	model = 1;
@@ -65,7 +65,7 @@ char	*ft_itoa(int n)
 	aux = (long int)n;
 	model = create_model(n);
 	i = 0;
-	str = malloc(length(n) + 1);
+	str = malloc(len(n) + 1);
 	if (!str)
 		return (NULL);
 	if (n < 0)

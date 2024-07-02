@@ -6,9 +6,12 @@
 /*   By: zlin-zho <zeyilin222@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 17:53:56 by zlin-zho          #+#    #+#             */
-/*   Updated: 2024/07/02 17:53:59 by zlin-zho         ###   ########.fr       */
+/*   Updated: 2024/07/02 19:22:33 by zlin-zho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void const *content)
 {
@@ -18,5 +21,6 @@ t_list	*ft_lstnew(void const *content)
 	if (!prueba)
 		return (NULL);
 	prueba->content = (void *)content;
+	prueba->next = NULL;
 	return (prueba);
 }
