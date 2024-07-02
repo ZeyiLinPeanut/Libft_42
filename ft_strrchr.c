@@ -6,7 +6,7 @@
 /*   By: zlin-zho <zeyilin222@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 12:47:12 by agomez-o          #+#    #+#             */
-/*   Updated: 2024/07/02 20:26:34 by zlin-zho         ###   ########.fr       */
+/*   Updated: 2024/07/02 20:41:13 by zlin-zho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *str, int c)
 	longitud = ft_strlen(str);
 	while (longitud >= 0)
 	{
-		if (str[longitud] == c)
+		if (str[longitud] == (unsigned char)c)
 		{
 			return ((char *)&str[longitud]);
 		}
