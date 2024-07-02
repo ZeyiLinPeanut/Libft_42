@@ -6,7 +6,7 @@
 /*   By: zlin-zho <zeyilin222@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:03:37 by zlin-zho          #+#    #+#             */
-/*   Updated: 2024/07/02 20:23:25 by zlin-zho         ###   ########.fr       */
+/*   Updated: 2024/07/02 20:44:07 by zlin-zho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *str, int c)
 	i = 0;
 	while (((char *)str)[i] != '\0')
 	{
-		if (((char *)str)[i] == c)
+		if (((char *)str)[i] == (unsigned char)c)
 			return ((char *)&str[i]);
 		i++;
 	}
