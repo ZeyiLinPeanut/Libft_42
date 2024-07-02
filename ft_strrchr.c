@@ -6,26 +6,26 @@
 /*   By: zlin-zho <zeyilin222@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 12:47:12 by agomez-o          #+#    #+#             */
-/*   Updated: 2024/07/02 20:25:19 by zlin-zho         ###   ########.fr       */
+/*   Updated: 2024/07/02 20:26:34 by zlin-zho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 #include <string.h>
-#include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-	int	i;
+	int	longitud;
 
-	i = 0;
-	while (((char *)str)[i] != '\0')
+	longitud = ft_strlen(str);
+	while (longitud >= 0)
 	{
-		if (((char *)str)[i] == c)
-			return ((char *)&str[i]);
-		i++;
+		if (str[longitud] == c)
+		{
+			return ((char *)&str[longitud]);
+		}
+		longitud--;
 	}
-	if (c == '\0')
-		return ((char *)&str[i]);
 	return (NULL);
 }
