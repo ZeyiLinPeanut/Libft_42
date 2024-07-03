@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zlin-zho <zeyilin222@gmail.com>            +#+  +:+       +#+        */
+/*   By: zlin-zho <zlin-zho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:18:16 by zlin-zho          #+#    #+#             */
-/*   Updated: 2024/07/02 22:03:47 by zlin-zho         ###   ########.fr       */
+/*   Updated: 2024/07/03 16:27:37 by zlin-zho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+# include <stdio.h>
 
 void				*ft_memset(void *b, int c, size_t len);
 size_t				ft_strlen(const char *s);
