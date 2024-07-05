@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zlin-zho <zlin-zho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: smolpeanut <smolpeanut@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:03:32 by zlin-zho          #+#    #+#             */
-/*   Updated: 2024/07/03 16:27:20 by zlin-zho         ###   ########.fr       */
+/*   Updated: 2024/07/03 18:32:28 by smolpeanut       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,6 @@ char	**ft_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	l = numstring(s, c);
-	printf("%d\n", l);
 	dst = (char **)malloc(sizeof(char *) * (l + 1));
 	if (dst == NULL)
 		return (NULL);
