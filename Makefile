@@ -6,7 +6,7 @@
 #    By: zlin-zho <zlin-zho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/02 16:18:22 by zlin-zho          #+#    #+#              #
-#    Updated: 2024/07/03 16:20:32 by zlin-zho         ###   ########.fr        #
+#    Updated: 2024/07/05 13:37:23 by zlin-zho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,9 +28,9 @@ ft_substr.c ft_tolower.c ft_toupper.c
 OBJ = $(SRC:.c=.o)
 INCLUDE = libft.h
 
-BONUSSRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c\
-ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c\
-ft_lstclear.c ft_lstiter.c ft_lstmap.c\
+BONUSSRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c\
+ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c\
+ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c\
 
 BONUSOBJ = $(BONUSSRC:.c=.o)
 
